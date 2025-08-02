@@ -35,3 +35,32 @@ um alle Aufgaben weiterhin abzudecken.
 
 
 \section{Funktion der einzelnen Personen und Umsetzungskette}
+Zu Beginn der technischen Umsetzung konzentrierten sich zwei Teammitglieder auf die Backend-Entwicklung,
+mit dem Fokus auf den Aufbau eines Parser-Services zur Konvertierung von \texttt{.bib}-Dateien in
+ein JSON-Format sowie auf die Gestaltung der benötigten API-Endpunkte.
+Parallel dazu begann ein drittes Teammitglied mit der Gestaltung des Frontends.
+Nach dem vorzeitigen Ausscheiden eines Teammitglieds übernahmen die
+beiden verbleibenden Personen zusätzlich die Weiterentwicklung der Benutzeroberfläche und
+stimmten ihre Aufgaben fortan eng miteinander ab.
+Die Umsetzung begann mit der Entwicklung des Parsers im Backend,
+welcher die Einträge aus der \texttt{.bib}-Datei in ein JSON-Format überträgt.
+Darauf folgte die Erstellung der API-Endpunkte zur Kommunikation mit dem Frontend.
+
+Im Anschluss wurde mit der Frontend-Entwicklung begonnen. Dabei wurde schrittweise folgendes umgesetzt:
+\begin{itemize}
+    \item Implementierung eines \textbf{„Importieren“-Buttons} zur Auswahl einer \texttt{.bib}-Datei.
+    \item Darstellung der Einträge in einer \textbf{aufklappbaren Struktur}.
+    \item Möglichkeit zur \textbf{Bearbeitung einzelner Einträge} direkt in der Oberfläche.
+    \item Einbindung einer \textbf{Suchkomponente} zur Filterung der Einträge.
+    \item Implementierung der \textbf{Paginierung} zur besseren Übersicht bei vielen Einträgen.
+    \item Nutzung von \textbf{Local Storage}, um Änderungen lokal zu speichern.
+    \item Einfügen eines \textbf{„Speichern“-Buttons} zur endgültigen Sicherung der bearbeiteten Daten.
+    \item Trennung der \textbf{Autoreninformationen} aus der \texttt{.bib}-Datei in einzelne Felder.
+    \item Einfügen eines \textbf{Buttons zum Löschen aller Einträge}.
+    \item Hinzufügen eines \textbf{„Exportieren“-Buttons} zur Ausgabe der modifizierten Daten.
+\end{itemize}
+
+Im Verlauf des Projekts wurden die einzelnen Entwicklungsschritte regelmäßig
+auf Grundlage der Besprechungen mit dem Betreuer angepasst. Dabei wurde großer Wert auf transparente
+Kommunikation und iterative Verbesserung gelegt. Durch kontinuierliche Rücksprachen und konstruktiven Austausch 
+konnte die Arbeit effizient koordiniert und gemeinsam vorangetrieben werden.
