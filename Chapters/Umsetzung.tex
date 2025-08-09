@@ -1,6 +1,17 @@
 \chapter{Umsetzung}
 
 \section{Systemarchitektur}
+Das entwickelte Assistenzsystem für wissenschaftliches Arbeiten basiert auf einer klar strukturierten 3-Schichten-Architektur. 
+Es besteht aus einem Frontend zur Benutzerinteraktion, einem Backend zur Verarbeitung der Anfragen sowie einer lokalen Datenbank 
+zur temporären Datenhaltung.
+
+Das Frontend wurde mit React, JavaScript und CSS implementiert, um eine erfolgreiche Benutzerinteraktion zu ermöglichen. 
+Über das Frontend können Professor:innen sowie andere Personen mit wissenschaftlichen Publikationen BibTeX-Dateien importieren, 
+deren Einträge bearbeiten oder löschen und anschließend als XML-Datei exportieren, um sie in OPUS zu importieren. Das Backend 
+wurde mit Node.js und Express realisiert und stellt über definierte Endpoints die Schnittstelle zwischen Frontend und Datenbank 
+bereit. Es übernimmt die Verarbeitung der Import- und Exportvorgänge sowie die Datenpersistenz. Die lokale Datenspeicherung 
+erfolgt im Local Storage des Systems, wodurch keine externe Datenbankverbindung notwendig ist. Dies vereinfacht die Architektur, 
+ermöglicht aber dennoch das Zwischenspeichern von Daten zwischen verschiedenen Arbeitsschritten innerhalb einer Sitzung.
 
 \section{Technologie-Stack}
 
