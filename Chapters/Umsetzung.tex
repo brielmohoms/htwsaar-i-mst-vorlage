@@ -67,10 +67,24 @@ Im Frontend wurde ein Button \glqq Importieren\grqq{} implementiert, der es dem 
 eine lokale \texttt{.bib}-Datei auszuwählen. Nach der Auswahl wird die Datei an das Backend gesendet, 
 dort geparst und die verarbeiteten Daten werden im Frontend angezeigt.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Graphics/front.png}
+    \caption{Benutzeroberfläche des Import-Buttons und Trennen der Einträge}
+    \label{fig:importieren}
+\end{figure}
+
 Jeder Eintrag kann direkt in der Oberfläche bearbeitet werden. Änderungen an Feldern wie Titel,
 Autoren oder Jahr werden sofort in der aktuellen Ansicht übernommen und können später gespeichert werden.
 Eine spezielle Logik trennt die Autorenangaben aus der \texttt{.bib}-Datei in einzelne Felder.
 Dies erlaubt eine saubere Darstellung und erleichtert die Bearbeitung einzelner Namen.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Graphics/frontend.png}
+    \caption{Bearbeitung eines Literatur-Eintrags}
+    \label{fig:bearbeiten}
+\end{figure}
 
 \subsection{Anzeige und Navigation der Einträge}
 Um die Übersichtlichkeit zu erhöhen, werden die einzelnen Literatur-Einträge in einer aufklappbaren
