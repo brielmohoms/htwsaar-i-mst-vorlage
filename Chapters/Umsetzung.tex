@@ -5,3 +5,61 @@
 \section{Technologie-Stack}
 
 \section{Implementierung}
+
+\subsection{Parsen der BibTeX-Datei in JSON (Backend)}
+Zu Beginn wurde ein Parser-Service implementiert,der eine hochgeladene \texttt{.bib}-Datei einliest 
+und deren Inhalte in ein strukturiertes JSON-Format umwandelt.Dies ermöglicht eine einfache Weiterverarbeitung der
+Literaturdaten im Frontend. Dabei wurden Bibliotheken
+genutzt, um die einzelnen Felder wie Titel, Autoren, Jahr und Publikationsart korrekt zu extrahieren.
+
+\subsection{API-Endpunkte für den Datenaustausch (Backend)}
+Für die Kommunikation zwischen Backend und Frontend wurden mehrere REST-API-Endpunkte erstellt.
+Diese liefern die geparsten Daten im JSON-Format, nehmen Änderungen vom Frontend entgegen und 
+stellen Funktionen zum Speichern und Löschen bereit. Die Endpunkte wurden so gestaltet, dass sie
+sowohl einzelne Einträge als auch komplette Datensätze verarbeiten können.
+
+\subsection{Importieren einer BibTeX-Datei (Frontend)}
+Im Frontend wurde ein Button \glqq Importieren\grqq{} implementiert,
+der es dem Benutzer ermöglicht, eine lokale \texttt{.bib}-Datei auszuwählen.
+Nach der Auswahl wird die Datei an das Backend gesendet, dort geparst und die verarbeiteten Daten werden im Frontend angezeigt.
+
+\subsection{Anzeige der Einträge in aufklappbarer Form (Frontend)}
+Um die Übersichtlichkeit zu erhöhen, werden die einzelnen Literatur-Einträge in 
+einer aufklappbaren Struktur dargestellt. So kann der Benutzer gezielt die Details
+eines Eintrags einsehen oder ausblenden.
+
+\subsection{Bearbeiten einzelner Einträge (Frontend)}
+Jeder Eintrag kann direkt in der Oberfläche bearbeitet werden.
+Änderungen an Feldern wie Titel, Autoren oder Jahr werden sofort in der aktuellen Ansicht
+übernommen und können später gespeichert werden.
+
+\subsection{Suchfunktion für Literatur-Einträge (Frontend)}
+Eine Suchkomponente ermöglicht das Filtern von Einträgen anhand von Schlagwörtern.
+Dies erleichtert das Auffinden bestimmter Publikationen in großen Datenbeständen.
+
+\subsection{Pagination der Einträge (Frontend)}
+Um die Navigation bei vielen Einträgen zu vereinfachen, 
+wurde eine Paginierung implementiert. Diese teilt die Liste der Einträge in
+mehrere Seiten auf und reduziert so die Ladezeit und die visuelle Überlastung.
+
+\subsection{Lokale Speicherung der Daten (Frontend)}
+Über den Local Storage des Browsers werden Änderungen lokal gespeichert, sodass diese auch nach 
+einem Neuladen der Seite erhalten bleiben. Diese Funktion dient als Zwischenspeicher, 
+bevor die Daten endgültig exportiert.
+
+\subsection{Speichern der bearbeiteten Daten (Frontend)}
+Der Button \glqq Speichern\grqq{} ermöglicht es, alle vorgenommenen Änderungen dauerhaft zu sichern.
+Dabei werden die aktuellen Daten aus dem Local Storage übernommen und entweder im Backend oder als Exportdatei gespeichert.
+
+\subsection{Trennen der Autoreninformationen (Frontend)}
+Eine spezielle Logik trennt die Autorenangaben aus der \texttt{.bib}-Datei in einzelne Felder.
+Dies erlaubt eine saubere Darstellung und erleichtert die Bearbeitung einzelner Namen.
+
+\subsection{Löschen aller Einträge (Frontend)}
+Mit dem Button \glqq Alle löschen\grqq{} können sämtliche Einträge in der aktuellen Ansicht entfernt werden.
+Diese Funktion ist besonders nützlich, wenn ein neuer Datensatz importiert werden soll.
+
+\subsection{Exportieren der Daten als XML (Frontend)}
+Zum Abschluss bietet der Button \glqq Exportieren\grqq{} die Möglichkeit, 
+alle gespeicherten Daten in eine XML-Datei umzuwandeln und herunterzuladen.
+Damit können die Daten in anderen Anwendungen weiterverwendet oder archiviert werden.
