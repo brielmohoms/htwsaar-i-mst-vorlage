@@ -1,1 +1,39 @@
 \chapter{Diskussion}
+
+Das entwickelte Assistenzsystem zur Übertragung wissenschaftlicher Arbeiten in das OPUS-Publikationssystem erfüllt die wesentlichen 
+Zielsetzungen des Projekts. Professoren und Professorinnen haben die Möglichkeit, BibTeX-Dateien zu importieren, die enthaltenen 
+Einträge zu bearbeiten oder zu löschen und im Anschluss im OPUS-Format zu exportieren. Die Bedienung erfolgt vollständig über 
+eine Weboberfläche, was eine einfache und intuitive Nutzung ermöglicht. Durch den gewählten Technologie-Stack aus React, Node.js 
+und Local Storage konnte ein leichtgewichtiger Prototyp realisiert werden, der ohne zusätzliche Server- oder Datenbankinfrastruktur 
+auskommt.
+
+Die im Projekt definierten technischen Ziele wurden weitgehend erreicht. Sämtliche Kernfunktionen, nämlich Import, Bearbeitung, 
+Suche, Speicherung, Löschung und Export von BibTeX-Daten, sind implementiert und funktionieren zuverlässig innerhalb der gewählten 
+Systemarchitektur. Im Zuge der Optimierung der Benutzerfreundlichkeit wurden ergänzend Funktionen wie eine Echtzeitvorschau der 
+Einträge und eine automatische Trennung einzelner Felder realisiert. Die vorliegende Umsetzung hat das Potenzial, den 
+Publikationsprozess zu erleichtern und die mit manueller Eingabe und Formatierung häufig auftretenden Fehler zu reduzieren.
+
+Trotz dieser Stärken gibt es Einschränkungen. So bietet die Speicherung der Daten im Local Storage nur eine eingeschränkte 
+Persistenz und ist nicht für den produktiven Einsatz mit mehreren Nutzern oder großen Datenmengen geeignet. Für den aktuellen 
+Anwendungsfall als Prototyp ist diese Lösung ausreichend. Für einen langfristigen und institutionellen Einsatz wäre jedoch 
+die Anbindung an eine serverseitige Datenbank empfehlenswert.
+
+Während des Implementierungsprozesses traten jedoch verschiedene Herausforderungen auf. Die Analyse der vorliegenden Daten ergab, 
+dass das Parsen von .bib-Dateien im Backend mit einer hohen Komplexität verbunden ist. Dies ist auf die Berücksichtigung 
+unterschiedlicher Formatvarianten und Sonderzeichen zurückzuführen. Auch die dynamische Bearbeitung einzelner Autoren im 
+Frontend stellte eine technische Herausforderung dar, da hierfür eine flexible und gleichzeitig stabile Datenstruktur 
+erforderlich war. Darüber hinaus waren organisatorische Schwierigkeiten bei der parallelen Arbeit an Frontend und 
+Backend zu verzeichnen, was eine präzise Abstimmung im Team erforderlich machte. Die zuvor genannten Probleme konnten 
+durch spezifische Anpassungen in der Parserlogik, erweiterte Validierungsmechanismen und transparente Kommunikationswege 
+innerhalb des Teams weitgehend gelöst werden.
+
+Insgesamt hat sich die gewählte Architektur als zweckmäßig erwiesen, um die gestellten Anforderungen mit überschaubarem 
+Entwicklungsaufwand umzusetzen. Der modulare Aufbau mit klarer Trennung von Frontend, Backend und Datenspeicherung 
+ermöglicht eine einfache Erweiterbarkeit, beispielsweise durch die Integration einer Benutzeranmeldung, 
+von Mehrsprachigkeit oder durch die direkte Anbindung an OPUS über eine API. Die Entwicklung hat zudem gezeigt, 
+dass ein enger Austausch im Team und eine klare Aufgabenteilung für die termingerechte Umsetzung entscheidend waren.
+
+Für eine zukünftige Weiterentwicklung wäre es sinnvoll, neben der Verbesserung der Datenpersistenz auch Funktionen 
+wie Mehrbenutzerunterstützung, erweiterte Suchfilter oder eine direkte Online-Veröffentlichung zu integrieren. 
+Durch diese Erweiterungen würde sich das System von einem reinen Übertragungswerkzeug zu einer vollwertigen 
+Publikationsplattform entwickeln und den Mehrwert für die Zielgruppe nochmals deutlich steigern.
