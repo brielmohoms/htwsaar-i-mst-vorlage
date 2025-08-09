@@ -1,7 +1,48 @@
 \chapter{Manual}
+In diesem Kapitel wird die Nutzung des entwickelten Assistenzsystems erläutert. 
+Zunächst wird erläutert, wie das Projekt lokal gestartet und lauffähig gemacht 
+wird. Im Anschluss folgt eine Schritt-für-Schritt-Anleitung zur Bedienung der 
+wichtigsten Funktionen: vom Import einer BibTeX-Datei über die Bearbeitung 
+einzelner Einträge bis hin zum Export im OPUS-Format. Das Ziel dieses Kapitels 
+besteht darin, zukünftigen Nutzern und Entwicklern eine klare und vollständige 
+Anleitung zur Verwendung des Systems zu bieten.
 
 
 \section{Starten der Projekts}
+Um das entwickelte Assistenzsystem auszuführen sind zunächst
+die notwendigen Systemvoraussetzung zu erfüllen, die in Tabelle
+~\ref{tab:systemvoraussetzungen} dargestellt sind. 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|p{8cm}|l|}
+\hline
+\textbf{Komponente} & \textbf{Beschreibung} & \textbf{Beispiel} \\
+\hline
+Node.js & Laufzeitumgebung für die Ausführung der Anwendung & v24.5.0 \\
+\hline
+Git & Versionskontrollsystem für den Zugriff auf das Projekt-Repository & v2.50.1 \\
+\hline
+IDE / Code-Editor & Entwicklungsumgebung zur Bearbeitung und Verwaltung des Quellcodes & Visual Studio Code \\
+\hline
+Webbrowser & Moderner Browser für die Web Storage API & Chrome \\
+\hline
+\end{tabular}
+\caption{Systemvoraussetzungen für das Assistenzsystem}
+\label{tab:systemvoraussetzungen}
+\end{table}
+
+Der Quellcode des Projekts wird über die Versionskontrolle bezogen. Die Installation und der Start erfolgen in folgenden Schritten:
+
+\begin{itemize}
+    \item Git-Repository lokal klonen: \texttt{git clone https://github.com/brielmohoms/publiflow}
+
+    \item In das Projektverzeichnis wechseln und Abhängigkeiten installieren: \texttt{npm install}
+
+    \item Projekt im Entwicklungsmodus starten: \texttt{npm start}
+
+    \item Die Anwendung dann unter \texttt{http://localhost:3000} im Browser erreichbar.
+\end{itemize}
 
 
 \section{Bedienung des Projekts}
