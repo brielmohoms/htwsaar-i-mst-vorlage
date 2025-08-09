@@ -13,7 +13,40 @@ bereit. Es übernimmt die Verarbeitung der Import- und Exportvorgänge sowie die
 erfolgt im Local Storage des Systems, wodurch keine externe Datenbankverbindung notwendig ist. Dies vereinfacht die Architektur, 
 ermöglicht aber dennoch das Zwischenspeichern von Daten zwischen verschiedenen Arbeitsschritten innerhalb einer Sitzung.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Graphics/systemarchitektur_diagramm.png}
+    \caption{Systemarchitektur des entwickelten Assistenzsystems}
+    \label{fig:systemarchitektur}
+\end{figure}
+
+
 \section{Technologie-Stack}
+Das Assistenzsystem wurde mit moderne und effektive Technologie Stack
+entwickelt, der eine einfache Wartung ermöglicht. Der Stack umfasst sowohl
+Frontend und Backend Technologien sowie die lokalen Datenspeicherung.
+
+\subsection{Frontend}
+Für die Benutzeroberfläche wurde das React-Framework in Kombination mit JavaScript eingesetzt. 
+React ermöglicht eine komponentenbasierte Entwicklung. Dadurch sind einzelne Funktionseinheiten 
+wie Importformulare, Bearbeitungsansichten und Exportfunktionen klar voneinander getrennt und 
+wiederverwendbar. Um eine ansprechende und benutzerfreundliche Oberfläche zu gewährleisten, 
+wurden die Gestaltung und das Layout mit CSS umgesetzt.
+
+\subsection{Backend}
+Die serverseitige Logik basiert auf Node.js mit dem Express-Framework. Durch die Verwendung von 
+Node.js wird eine ereignisgesteuerte und asynchrone Verarbeitung ermöglicht, wodurch die Verarbeitung 
+von Benutzeraktionen beschleunigt werden kann. Express bietet eine klare Struktur für die Definition 
+von Endpoints, über die das Frontend mit dem Backend kommuniziert. Die vorliegende Arbeit befasst 
+sich mit REST-Endpoints, die insbesondere für die Steuerung von Import- und Exportprozessen sowie für 
+den Zugriff auf die lokale Datenspeicherung genutzt werden.
+
+\subsection{Datenhaltung}
+Für die Datenspeicherung wird der Local Storage des Browsers verwendet. Dieser ermöglicht eine einfache, 
+eingeschränkt persistente Ablage der importierten BibTeX-Dateien, die auch nach dem Schließen des Browsers 
+erhalten bleibt. Da die Daten lediglich als temporäre Zwischenablage dienen und anschließend im OPUS-Format 
+exportiert werden, ist der Einsatz einer vollwertigen Datenbank nicht erforderlich. Diese Entscheidung 
+reduziert die Systemkomplexität und genügt den Anforderungen des Systems.
 
 
 \section{Implementierung der Features}
