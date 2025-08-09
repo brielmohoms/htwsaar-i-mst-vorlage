@@ -13,11 +13,6 @@ Systemarchitektur. Im Zuge der Optimierung der Benutzerfreundlichkeit wurden erg
 Einträge und eine automatische Trennung einzelner Felder realisiert. Die vorliegende Umsetzung hat das Potenzial, den 
 Publikationsprozess zu erleichtern und die mit manueller Eingabe und Formatierung häufig auftretenden Fehler zu reduzieren.
 
-Trotz dieser Stärken gibt es Einschränkungen. So bietet die Speicherung der Daten im Local Storage nur eine eingeschränkte 
-Persistenz und ist nicht für den produktiven Einsatz mit mehreren Nutzern oder großen Datenmengen geeignet. Für den aktuellen 
-Anwendungsfall als Prototyp ist diese Lösung ausreichend. Für einen langfristigen und institutionellen Einsatz wäre jedoch 
-die Anbindung an eine serverseitige Datenbank empfehlenswert.
-
 Während des Implementierungsprozesses traten jedoch verschiedene Herausforderungen auf. Die Analyse der vorliegenden Daten ergab, 
 dass das Parsen von .bib-Dateien im Backend mit einer hohen Komplexität verbunden ist. Dies ist auf die Berücksichtigung 
 unterschiedlicher Formatvarianten und Sonderzeichen zurückzuführen. Auch die dynamische Bearbeitung einzelner Autoren im 
