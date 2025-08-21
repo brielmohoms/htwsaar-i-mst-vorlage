@@ -3,9 +3,9 @@
 \section{Systemarchitektur}
 Das entwickelte Assistenzsystem für wissenschaftliches Arbeiten basiert auf einer klar strukturierten 3-Schichten-Architektur. 
 Es besteht aus einem Frontend zur Benutzerinteraktion, einem Backend zur Verarbeitung der Anfragen sowie einer lokalen Datenbank 
-zur temporären Datenhaltung.
+zur temporären Datenhaltung.\\
 
-Das Frontend wurde mit React, JavaScript und CSS implementiert, um eine erfolgreiche Benutzerinteraktion zu ermöglichen. 
+\noindent Das Frontend wurde mit React, JavaScript und CSS implementiert, um eine erfolgreiche Benutzerinteraktion zu ermöglichen. 
 Über das Frontend können Professor:innen sowie andere Personen mit wissenschaftlichen Publikationen BibTeX-Dateien importieren, 
 deren Einträge bearbeiten oder löschen und anschließend als XML-Datei exportieren, um sie in OPUS zu importieren. Das Backend 
 wurde mit Node.js und Express realisiert und stellt über definierte Endpoints die Schnittstelle zwischen Frontend und Datenbank 
@@ -19,7 +19,6 @@ ermöglicht aber dennoch das Zwischenspeichern von Daten zwischen verschiedenen 
     \caption{Systemarchitektur des entwickelten Assistenzsystems}
     \label{fig:systemarchitektur}
 \end{figure}
-
 
 \section{Technologie-Stack}
 Das Assistenzsystem wurde mit moderne und effektive Technologie Stack
@@ -55,9 +54,9 @@ reduziert die Systemkomplexität und genügt den Anforderungen des Systems.
 Zu Beginn wurde ein Parser-Service implementiert, der eine hochgeladene \texttt{.bib}-Datei einliest 
 und deren Inhalte in ein strukturiertes JSON-Format umwandelt. Dies ermöglicht eine einfache Weiterverarbeitung 
 der Literaturdaten im Frontend. Dabei wurden Bibliotheken genutzt, um die einzelnen Felder wie Titel, Autoren, Jahr
-und Publikationsart korrekt zu extrahieren.
+und Publikationsart korrekt zu extrahieren.\\
 
-Für die Kommunikation zwischen Backend und Frontend wurden mehrere REST-API-Endpunkte erstellt.
+\noindent Für die Kommunikation zwischen Backend und Frontend wurden mehrere REST-API-Endpunkte erstellt.
 Diese liefern die geparsten Daten im JSON-Format, nehmen Änderungen vom Frontend entgegen und
 stellen Funktionen zum Speichern und Löschen bereit. Die Endpunkte wurden so gestaltet, dass sie sowohl
 einzelne Einträge als auch komplette Datensätze verarbeiten können.
@@ -74,7 +73,7 @@ dort geparst und die verarbeiteten Daten werden im Frontend angezeigt.
     \label{fig:importieren}
 \end{figure}
 
-Jeder Eintrag kann direkt in der Oberfläche bearbeitet werden. Änderungen an Feldern wie Titel,
+\noindent Jeder Eintrag kann direkt in der Oberfläche bearbeitet werden. Änderungen an Feldern wie Titel,
 Autoren oder Jahr werden sofort in der aktuellen Ansicht übernommen und können später gespeichert werden.
 Eine spezielle Logik trennt die Autorenangaben aus der \texttt{.bib}-Datei in einzelne Felder.
 Dies erlaubt eine saubere Darstellung und erleichtert die Bearbeitung einzelner Namen.
@@ -88,16 +87,16 @@ Dies erlaubt eine saubere Darstellung und erleichtert die Bearbeitung einzelner 
 
 \subsection{Anzeige und Navigation der Einträge}
 Um die Übersichtlichkeit zu erhöhen, werden die einzelnen Literatur-Einträge in einer aufklappbaren
-Struktur dargestellt. So kann der Benutzer gezielt die Details eines Eintrags einsehen oder ausblenden.
+Struktur dargestellt. So kann der Benutzer gezielt die Details eines Eintrags einsehen oder ausblenden.\\
 
-Um die Navigation bei vielen Einträgen zu vereinfachen, wurde eine Paginierung implementiert.
+\noindent Um die Navigation bei vielen Einträgen zu vereinfachen, wurde eine Paginierung implementiert.
 Diese teilt die Liste der Einträge in mehrere Seiten auf und reduziert so die Ladezeit und die visuelle Überlastung.
 
 \subsection{Such- und Löschfunktionen}
 Eine Suchkomponente ermöglicht das Filtern von Einträgen anhand von Schlagwörtern.
 Dies erleichtert das Auffinden bestimmter Publikationen in großen Datenbeständen.
 
-Mit dem Button \glqq Alle löschen\grqq{} können sämtliche Einträge in der aktuellen Ansicht entfernt werden.
+\noindent Mit dem Button \glqq Alle löschen\grqq{} können sämtliche Einträge in der aktuellen Ansicht entfernt werden.
 Diese Funktion ist besonders nützlich, wenn ein neuer Datensatz importiert werden soll.
 
 \subsection{Speicherung und Export der Daten}
@@ -105,7 +104,7 @@ Diese Funktion ist besonders nützlich, wenn ein neuer Datensatz importiert werd
 sodass diese auch nach einem Neuladen der Seite erhalten bleiben.
 Diese Funktion dient als Zwischenspeicher, bevor die Daten endgültig exportiert oder gespeichert werden.
 Der Button \glqq Speichern\grqq{} ermöglicht es, alle vorgenommenen Änderungen dauerhaft zu sichern.
-Dabei werden die aktuellen Daten aus dem Local Storage übernommen und entweder im Backend oder als Exportdatei gespeichert.
+Dabei werden die aktuellen Daten aus dem Local Storage übernommen und entweder im Backend oder als Exportdatei gespeichert.\\
 
-Zum Schluss  bietet der Button \glqq Exportieren\grqq{} die Möglichkeit,
+\noindent Zum Schluss  bietet der Button \glqq Exportieren\grqq{} die Möglichkeit,
 alle gespeicherten Daten in eine XML-Datei umzuwandeln und herunterzuladen.Diese Datei kann später in OPUS importiert werden .
